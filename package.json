@@ -15,11 +15,6 @@
     "dev": "vuepress dev example",
     "eslint-ext": "eslint --ext .js,.vue ./",
     "eslint-fix": "eslint --fix --ext .js,.vue ./",
-    "prepublish": "lerna publish --dist-tag next",
-    "publish": "lerna publish",
-    "push": "yarn commit && git push",
-    "test": "bash scripts/test.sh",
-    "update": "yarn upgrade-interactive --latest",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
