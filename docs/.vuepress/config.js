@@ -6,7 +6,7 @@ module.exports = {
     ['link', { rel: 'icon', href: '/myico.ico' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
   ],
-  base: '/reco-example-test/',
+  base: '/huashuocuicuiBlog/',
   theme: 'reco',
   // theme: require.resolve('../../packages/vuepress-theme-reco'),
   themeConfig: {
