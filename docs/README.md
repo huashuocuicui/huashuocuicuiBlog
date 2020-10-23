@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: hushuocuicui
+heroText: huashuocuicui
 tagline: 小手搬砖.
 # heroImage: /hero.png
 # heroImageStyle: {
