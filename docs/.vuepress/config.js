@@ -12,7 +12,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '主页', link: '/', icon: 'reco-home' },
-      { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
+      // { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
       // { text: '其它', link: '/views/sidebar/' },
       { text: 'authine', link: '/views/sidebargroup/' }
     ],
