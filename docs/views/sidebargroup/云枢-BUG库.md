@@ -41,8 +41,11 @@ categories:
 
 ::: details 查看解决办法
 
+<div class="demo-image__preview">
 <el-image class="imgs" :src="$withBase(srcList_2[0])" :preview-src-list="srcList_2"></el-image>
 <el-image class="imgs" :src="$withBase(srcList_2[1])" :preview-src-list="srcList_2"></el-image>
+</div>
+
 :::
 
 
