@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>es6字符串扩展 | huashuocuicui</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/blog/myico.ico">
+    <meta name="description" content="huashuocuicui boke!">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/blog/assets/css/0.styles.be5999a8.css" as="style"><link rel="preload" href="/blog/assets/js/app.a450f01b.js" as="script"><link rel="preload" href="/blog/assets/js/3.1bc4757d.js" as="script"><link rel="preload" href="/blog/assets/js/1.8d651c59.js" as="script"><link rel="preload" href="/blog/assets/js/28.00000c24.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.3d8b3c66.js"><link rel="prefetch" href="/blog/assets/js/11.1b18e816.js"><link rel="prefetch" href="/blog/assets/js/12.024baf66.js"><link rel="prefetch" href="/blog/assets/js/13.09074baa.js"><link rel="prefetch" href="/blog/assets/js/14.7c222adf.js"><link rel="prefetch" href="/blog/assets/js/15.5ebd2fbd.js"><link rel="prefetch" href="/blog/assets/js/16.cc63f287.js"><link rel="prefetch" href="/blog/assets/js/17.3415f522.js"><link rel="prefetch" href="/blog/assets/js/18.fd24098b.js"><link rel="prefetch" href="/blog/assets/js/19.1db53b16.js"><link rel="prefetch" href="/blog/assets/js/20.04706acc.js"><link rel="prefetch" href="/blog/assets/js/21.fd67e81c.js"><link rel="prefetch" href="/blog/assets/js/22.b2050582.js"><link rel="prefetch" href="/blog/assets/js/23.5048b509.js"><link rel="prefetch" href="/blog/assets/js/24.2bccf55a.js"><link rel="prefetch" href="/blog/assets/js/25.b34df524.js"><link rel="prefetch" href="/blog/assets/js/26.fbb12e97.js"><link rel="prefetch" href="/blog/assets/js/27.fda14d34.js"><link rel="prefetch" href="/blog/assets/js/29.78da5e2f.js"><link rel="prefetch" href="/blog/assets/js/30.e299059d.js"><link rel="prefetch" href="/blog/assets/js/31.cdd8feb8.js"><link rel="prefetch" href="/blog/assets/js/32.6f8eef60.js"><link rel="prefetch" href="/blog/assets/js/33.2877662e.js"><link rel="prefetch" href="/blog/assets/js/34.1355b9d9.js"><link rel="prefetch" href="/blog/assets/js/35.9c6b2db7.js"><link rel="prefetch" href="/blog/assets/js/36.b6510d27.js"><link rel="prefetch" href="/blog/assets/js/4.4008c465.js"><link rel="prefetch" href="/blog/assets/js/5.8c83e85c.js"><link rel="prefetch" href="/blog/assets/js/6.39ef9b14.js"><link rel="prefetch" href="/blog/assets/js/7.745d6f6f.js"><link rel="prefetch" href="/blog/assets/js/8.bdf381fd.js"><link rel="prefetch" href="/blog/assets/js/9.41588540.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.be5999a8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-0dc0a0e4><div data-v-0dc0a0e4><div id="loader-wrapper" class="loading-wrapper" data-v-25581158 data-v-0dc0a0e4 data-v-0dc0a0e4><div class="loader-main" data-v-25581158><div data-v-25581158></div><div data-v-25581158></div><div data-v-25581158></div><div data-v-25581158></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-f9f2eee2 data-v-0dc0a0e4 data-v-0dc0a0e4><h3 class="title" style="display:none;" data-v-f9f2eee2 data-v-f9f2eee2>huashuocuicui</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-f9f2eee2 data-v-f9f2eee2><input type="password" value="" data-v-f9f2eee2> <span data-v-f9f2eee2>Konck! Knock!</span> <button data-v-f9f2eee2>OK</button></label> <div class="footer" style="display:none;" data-v-f9f2eee2 data-v-f9f2eee2><span data-v-f9f2eee2><i class="iconfont reco-theme" data-v-f9f2eee2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-f9f2eee2>vuePress-theme-reco</a></span> <span data-v-f9f2eee2><i class="iconfont reco-copyright" data-v-f9f2eee2></i> <a data-v-f9f2eee2><span data-v-f9f2eee2>huashuocuicui</span>
+            
+          <span data-v-f9f2eee2>2016 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-0dc0a0e4><header class="navbar" data-v-0dc0a0e4><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/head.png" alt="huashuocuicui" class="logo"> <span class="site-name">huashuocuicui</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      类别
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/云枢/" class="nav-link"><i class="iconfont undefined"></i>
+  云枢
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/h3/" class="nav-link"><i class="iconfont undefined"></i>
+  h3
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/blog/views/sidebargroup/" class="nav-link"><i class="iconfont undefined"></i>
+  authine
+</a></div><div class="nav-item"><a href="/blog/views/xuexi/" class="nav-link router-link-active"><i class="iconfont undefined"></i>
+  学习
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-0dc0a0e4></div> <aside class="sidebar" data-v-0dc0a0e4><div class="personal-info-wrapper" data-v-55a1c6e7 data-v-0dc0a0e4><img src="/blog/head.png" alt="author-avatar" class="personal-img" data-v-55a1c6e7> <h3 class="name" data-v-55a1c6e7>
+    huashuocuicui
+  </h3> <div class="num" data-v-55a1c6e7><div data-v-55a1c6e7><h3 data-v-55a1c6e7>5</h3> <h6 data-v-55a1c6e7>Article</h6></div> <div data-v-55a1c6e7><h3 data-v-55a1c6e7>12</h3> <h6 data-v-55a1c6e7>Tag</h6></div></div> <hr data-v-55a1c6e7></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      类别
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/云枢/" class="nav-link"><i class="iconfont undefined"></i>
+  云枢
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/h3/" class="nav-link"><i class="iconfont undefined"></i>
+  h3
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/blog/views/sidebargroup/" class="nav-link"><i class="iconfont undefined"></i>
+  authine
+</a></div><div class="nav-item"><a href="/blog/views/xuexi/" class="nav-link router-link-active"><i class="iconfont undefined"></i>
+  学习
+</a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>markDown</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>ES6</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/views/xuexi/es6/es6.html" class="sidebar-link">es6</a></li><li><a href="/blog/views/xuexi/es6/es6简介.html" class="sidebar-link">es6简介</a></li><li><a href="/blog/views/xuexi/es6/es6变量声明.html" class="sidebar-link">es6变量声明</a></li><li><a href="/blog/views/xuexi/es6/es6字符串扩展.html" class="active sidebar-link">es6字符串扩展</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>typeScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTTP</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-f9f2eee2 data-v-0dc0a0e4><h3 class="title" style="display:none;" data-v-f9f2eee2 data-v-f9f2eee2>es6字符串扩展</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-f9f2eee2 data-v-f9f2eee2><input type="password" value="" data-v-f9f2eee2> <span data-v-f9f2eee2>Konck! Knock!</span> <button data-v-f9f2eee2>OK</button></label> <div class="footer" style="display:none;" data-v-f9f2eee2 data-v-f9f2eee2><span data-v-f9f2eee2><i class="iconfont reco-theme" data-v-f9f2eee2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-f9f2eee2>vuePress-theme-reco</a></span> <span data-v-f9f2eee2><i class="iconfont reco-copyright" data-v-f9f2eee2></i> <a data-v-f9f2eee2><span data-v-f9f2eee2>huashuocuicui</span>
+            
+          <span data-v-f9f2eee2>2016 - </span>
+          2021
+        </a></span></div></div> <div data-v-0dc0a0e4><main class="page"><div class="page-title" style="display:none;"><h1>es6字符串扩展</h1> <hr> <div data-v-b0fc8470><i class="iconfont reco-account" data-v-b0fc8470><span data-v-b0fc8470>huashuocuicui</span></i> <i class="iconfont reco-date" data-v-b0fc8470><span data-v-b0fc8470>2021-02-01</span></i> <!----> <i class="iconfont reco-tag tags" data-v-b0fc8470><span class="tag-item" data-v-b0fc8470>js</span><span class="tag-item" data-v-b0fc8470>es6</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="_1-字符的-unicode-表示法"><a href="#_1-字符的-unicode-表示法" class="header-anchor">#</a> 1.字符的 Unicode 表示法</h2> <p>ES6 加强了对 Unicode 的支持，允许采用\uxxxx形式表示一个字符，其中xxxx表示字符的 Unicode 码点, 但是，这种表示法只限于码点在\u0000~\uFFFF之间的字符。超出这个范围的字符，必须用两个双字节的形式表示</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>&quot;\uD842\uDFB7&quot;
+// &quot;𠮷&quot;
+&quot;\u20BB7&quot;
+// &quot; 7&quot;
+
+// 转码后
+input.map(function (item) {
+    return item + 1;
+});
+//上面代码表示，如果直接在\u后面跟上超过0xFFFF的数值（比如\u20BB7），JavaScript 会理解成\u20BB+7。由于\u20BB是一个不可打印字符，所以只会显示一个空格，后面跟着一个7。ES6 对这一点做出了改进，只要将码点放入大括号，就能正确解读该字符
+&quot;\u{20BB7}&quot;
+// &quot;𠮷&quot;
+
+&quot;\u{41}\u{42}\u{43}&quot;
+// &quot;ABC&quot;
+
+let hello = 123;
+hell\u{6F} // 123
+
+'\u{1F680}' === '\uD83D\uDE80'
+// true
+</code></pre></div></details> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>//JavaScript 共有 6 种方法可以表示一个字符。
+'\z' === 'z'  // true
+'\172' === 'z' // true
+'\x7A' === 'z' // true
+'\u007A' === 'z' // true
+'\u{7A}' === 'z' // true
+</code></pre></div></details> <h2 id="_2-字符串的遍历器接口"><a href="#_2-字符串的遍历器接口" class="header-anchor">#</a> 2.字符串的遍历器接口</h2> <p>ES6 为字符串添加了遍历器接口，使得字符串可以被for...of循环遍历。这个遍历器最大的优点是可以识别大于0xFFFF的码点，传统的for循环无法识别这样的码点。</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>let text = String.fromCodePoint(0x20BB7);
+
+for (let i = 0; i &lt; text.length; i++) {
+    console.log(text[i]);
+}
+// &quot; &quot;
+// &quot; &quot;
+
+for (let i of text) {
+    console.log(i);
+}
+// &quot;𠮷&quot;
+</code></pre></div></details> <h2 id="_3-字符关键字"><a href="#_3-字符关键字" class="header-anchor">#</a> 3.字符关键字</h2> <p>U+005C：反斜杠（reverse solidus)
+U+000D：回车（carriage return）
+U+2028：行分隔符（line separator）
+U+2029：段分隔符（paragraph separator）
+U+000A：换行符（line feed）</p> <h2 id="_4-json-stringify-的改造"><a href="#_4-json-stringify-的改造" class="header-anchor">#</a> 4.JSON.stringify() 的改造</h2> <p>根据标准，JSON 数据必须是 UTF-8 编码。但是，现在的JSON.stringify()方法有可能返回不符合 UTF-8 标准的字符串。
+为了确保返回的是合法的 UTF-8 字符，ES2019 改变了JSON.stringify()的行为。如果遇到0xD800到0xDFFF之间的单个码点，或者不存在的配对形式，它会返回转义字符串，留给应用自己决定下一步的处理。</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>JSON.stringify('\u{D834}') // &quot;&quot;\\uD834&quot;&quot;
+JSON.stringify('\uDF06\uD834') // &quot;&quot;\\udf06\\ud834&quot;&quot;
+</code></pre></div></details> <h2 id="_5-模板字符串"><a href="#_5-模板字符串" class="header-anchor">#</a> 5.模板字符串</h2> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>// 传统模板
+$('#result').append(
+    'There are &lt;b&gt;' + basket.count + '&lt;/b&gt; ' +
+    'items in your basket, ' +
+    '&lt;em&gt;' + basket.onSale +
+    '&lt;/em&gt; are on sale!'
+);
+// es6
+$('#result').append(`
+    There are &lt;b&gt;${basket.count}&lt;/b&gt; items
+    in your basket, &lt;em&gt;${basket.onSale}&lt;/em&gt;
+    are on sale!
+`);
+
+//  `字符串  ${变量/函数/js代码}`
+</code></pre></div></details> <h2 id="_6-模板编译"><a href="#_6-模板编译" class="header-anchor">#</a> 6.模板编译</h2> <h2 id="_7-标签模板"><a href="#_7-标签模板" class="header-anchor">#</a> 7.标签模板</h2> <h2 id="_8-模板字符串的限制"><a href="#_8-模板字符串的限制" class="header-anchor">#</a> 8.模板字符串的限制</h2> <h2 id="_9-string-fromcodepoint-新增"><a href="#_9-string-fromcodepoint-新增" class="header-anchor">#</a> 9. String.fromCodePoint()   - 新增</h2> <p>ES5 提供String.fromCharCode()方法，用于从 Unicode 码点返回对应字符，但是这个方法不能识别码点大于0xFFFF的字符
+ES6 提供了String.fromCodePoint()方法，可以识别大于0xFFFF的字符，弥补了String.fromCharCode()方法的不足。在作用上，正好与下面的codePointAt()方法相反。</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>//es5
+String.fromCharCode(0x20BB7)
+// &quot;ஷ&quot;
+
+//es6
+String.fromCodePoint(0x20BB7)
+// &quot;𠮷&quot;
+String.fromCodePoint(0x78, 0x1f680, 0x79) === 'x\uD83D\uDE80y'
+// true
+</code></pre></div></details> <div style="color:red;">如果String.fromCodePoint方法有多个参数，则它们会被合并成一个字符串返回。</div> <h2 id="_10-codepointat-新增"><a href="#_10-codepointat-新增" class="header-anchor">#</a> 10. codePointAt()    - 新增</h2> <p>JavaScript 内部，字符以 UTF-16 的格式储存，每个字符固定为2个字节。对于那些需要4个字节储存的字符（Unicode 码点大于0xFFFF的字符），JavaScript 会认为它们是两个字符。</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>var s = &quot;𠮷&quot;;
+
+s.length // 2
+s.charAt(0) // ''
+s.charAt(1) // ''
+s.charCodeAt(0) // 55362
+s.charCodeAt(1) // 57271
+</code></pre></div></details> <p>ES6 提供了codePointAt()方法，能够正确处理 4 个字节储存的字符，返回一个字符的码点。</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>let s = '𠮷a';
+
+s.codePointAt(0) // 134071
+s.codePointAt(1) // 57271
+s.codePointAt(2) // 97
+//codePointAt()方法的参数，是字符在字符串中的位置（从 0 开始）。上面代码中，JavaScript 将“𠮷a”视为三个字符，codePointAt 方法在第一个字符上，正确地识别了“𠮷”，返回了它的十进制码点 134071（即十六进制的20BB7）。在第二个字符（即“𠮷”的后两个字节）和第三个字符“a”上，codePointAt()方法的结果与charCodeAt()方法相同。
+</code></pre></div></details> <p>codePointAt()方法是测试一个字符由两个字节还是由四个字节组成的最简单方法</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>function is32Bit(c) {
+return c.codePointAt(0) &gt; 0xFFFF;
+}
+
+is32Bit(&quot;𠮷&quot;) // true
+is32Bit(&quot;a&quot;) // false
+</code></pre></div></details> <h2 id="_11-string-raw-新增"><a href="#_11-string-raw-新增" class="header-anchor">#</a> 11. String.raw()     - 新增</h2> <p>ES6 还为原生的 String 对象，提供了一个raw()方法。该方法返回一个斜杠都被转义（即斜杠前面再加一个斜杠）的字符串，往往用于模板字符串的处理方法。</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>String.raw`Hi\n${2+3}!`
+// 实际返回 &quot;Hi\\n5!&quot;，显示的是转义后的结果 &quot;Hi\n5!&quot;
+
+String.raw`Hi\u000A!`;
+// 实际返回 &quot;Hi\\u000A!&quot;，显示的是转义后的结果 &quot;Hi\u000A!&quot;
+
+//如果原字符串的斜杠已经转义，那么String.raw()会进行再次转义。
+String.raw`Hi\\n`
+// 返回 &quot;Hi\\\\n&quot;
+
+String.raw`Hi\\n` === &quot;Hi\\\\n&quot; // true
+</code></pre></div></details> <p>String.raw()的代码实现基本如下。</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>String.raw = function (strings, ...values) {
+    let output = '';
+    let index;
+    for (index = 0; index &lt; values.length; index++) {
+        output += strings.raw[index] + values[index];
+    }
+
+    output += strings.raw[index]
+    return output;
+}
+</code></pre></div></details> <h2 id="_12-normalize-新增"><a href="#_12-normalize-新增" class="header-anchor">#</a> 12. normalize()      - 新增</h2> <p>许多欧洲语言有语调符号和重音符号。为了表示它们，Unicode 提供了两种方法。一种是直接提供带重音符号的字符，比如Ǒ（\u01D1）。另一种是提供合成符号（combining character），即原字符与重音符号的合成，两个字符合成一个字符，比如O（\u004F）和ˇ（\u030C）合成Ǒ（\u004F\u030C）。</p> <p>这两种表示方法，在视觉和语义上都等价，但是 JavaScript 不能识别</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>// avaScript 将合成字符视为两个字符，导致两种表示方法不相等。
+'\u01D1'==='\u004F\u030C' //false
+
+'\u01D1'.length // 1
+'\u004F\u030C'.length // 2
+</code></pre></div></details> <p>ES6 提供字符串实例的normalize()方法，用来将字符的不同表示方法统一为同样的形式，这称为 Unicode 正规化。</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>'\u01D1'.normalize() === '\u004F\u030C'.normalize()
+// true
+</code></pre></div></details> <div style="color:red;">
+    normalize方法可以接受一个参数来指定normalize的方式，参数的四个可选值如下。
+</div> <div style="padding-left:10px;"><br>
+    - NFC，默认参数，表示“标准等价合成”（Normalization Form Canonical Composition），返回多个简单字符的合成字符。所谓“标准等价”指的是视觉和语义上的等价。
+<br>
+    - NFD，表示“标准等价分解”（Normalization Form Canonical Decomposition），即在标准等价的前提下，返回合成字符分解的多个简单字符。
+<br>
+    - NFKC，表示“兼容等价合成”（Normalization Form Compatibility Composition），返回合成字符。所谓“兼容等价”指的是语义上存在等价，但视觉上不等价，比如“囍”和“喜喜”。（这只是用来举例，normalize方法不能识别中文。）
+<br>
+    - NFKD，表示“兼容等价分解”（Normalization Form Compatibility Decomposition），即在兼容等价的前提下，返回合成字符分解的多个简单字符。
+</div> <h2 id="_13-实例方法：includes-startswith-endswith-新增"><a href="#_13-实例方法：includes-startswith-endswith-新增" class="header-anchor">#</a> 13. 实例方法：includes(), startsWith(), endsWith()       - 新增</h2> <p>JavaScript 只有indexOf方法，可以用来确定一个字符串是否包含在另一个字符串中。ES6 又提供了三种新方法。
+- includes()：返回布尔值，表示是否找到了参数字符串。
+- startsWith()：返回布尔值，表示参数字符串是否在原字符串的头部。
+- endsWith()：返回布尔值，表示参数字符串是否在原字符串的尾部。</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>let s = 'Hello world!';
+
+s.startsWith('world', 6) // true
+s.endsWith('Hello', 5) // true
+s.includes('Hello', 6) // false
+
+// 这三个方法都支持第二个参数，表示开始搜索的位置 ***
+</code></pre></div></details> <h2 id="_14-repeat-新增"><a href="#_14-repeat-新增" class="header-anchor">#</a> 14. repeat()      - 新增</h2> <p>repeat方法返回一个新字符串，表示将原字符串重复n次。</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>'x'.repeat(3) // &quot;xxx&quot;
+'hello'.repeat(2) // &quot;hellohello&quot;
+'na'.repeat(0) // &quot;&quot;
+</code></pre></div></details> <div style="color:red;">
+    1.参数如果是小数，会被取整(向下取整)。
+<br>
+    2.参数是负数或者Infinity，会报错。
+<br>
+    3.如果参数是 0 到-1 之间的小数，则等同于 0，这是因为会先进行取整运算。0 到-1 之间的小数，取整以后等于-0，repeat视同为 0
+<br>
+    4. 参数NaN等同于 0。
+<br>
+    5. repeat的参数是字符串，则会先转换成数字
+</div> <h2 id="_15-实例方法：padstart-，padend-新增"><a href="#_15-实例方法：padstart-，padend-新增" class="header-anchor">#</a> 15. 实例方法：padStart()，padEnd()      - 新增</h2> <p>ES2017 引入了字符串补全长度的功能。如果某个字符串不够指定长度，会在头部或尾部补全。padStart()用于头部补全，padEnd()用于尾部补全。</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>'x'.padStart(5, 'ab') // 'ababx'
+'x'.padStart(4, 'ab') // 'abax'
+
+'x'.padEnd(5, 'ab') // 'xabab'
+'x'.padEnd(4, 'ab') // 'xaba'
+
+// padStart()和padEnd()一共接受两个参数，第一个参数是字符串补全生效的最大长度，第二个参数是用来补全的字符串
+</code></pre></div></details> <div style="color:red;">
+    1.如果原字符串的长度，等于或大于最大长度，则字符串补全不生效，返回原字符串。<br>
+    2.如果用来补全的字符串与原字符串，两者的长度之和超过了最大长度，则会截去超出位数的补全字符串。<br>
+    3.如果省略第二个参数，默认使用空格补全长度。<br></div> <p>padStart()的常见用途</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>// 1.为数值补全指定位数。下面代码生成 10 位的数值字符串。
+'1'.padStart(10, '0') // &quot;0000000001&quot;
+'12'.padStart(10, '0') // &quot;0000000012&quot;
+'123456'.padStart(10, '0') // &quot;0000123456&quot;
+
+// 2.提示字符串格式。
+'12'.padStart(10, 'YYYY-MM-DD') // &quot;YYYY-MM-12&quot;
+'09-12'.padStart(10, 'YYYY-MM-DD') // &quot;YYYY-09-12&quot;
+</code></pre></div></details> <h2 id="_16-实例方法：trimstart-，trimend-新增"><a href="#_16-实例方法：trimstart-，trimend-新增" class="header-anchor">#</a> 16. 实例方法：trimStart()，trimEnd()     - 新增</h2> <p>ES2019 对字符串实例新增了trimStart()和trimEnd()这两个方法。它们的行为与trim()一致，trimStart()消除字符串头部的空格，trimEnd()消除尾部的空格。它们返回的都是新字符串，不会修改原始字符串。</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>const s = '  abc  ';
+
+s.trim() // &quot;abc&quot;
+s.trimStart() // &quot;abc  &quot;
+s.trimEnd() // &quot;  abc&quot;
+
+//上面代码中，trimStart()只消除头部的空格，保留尾部的空格。trimEnd()也是类似行为。
+</code></pre></div></details> <div style="color:red;">
+    1.除了空格键，这两个方法对字符串头部（或尾部）的 tab 键、换行符等不可见的空白符号也有效。<br>
+    2.浏览器还部署了额外的两个方法，trimLeft()是trimStart()的别名，trimRight()是trimEnd()的别名。
+</div> <h2 id="_17-matchall-新增"><a href="#_17-matchall-新增" class="header-anchor">#</a> 17. matchAll()       - 新增</h2> <p>matchAll()方法返回一个正则表达式在当前字符串的所有匹配，</p> <h2 id="_18-replaceall-新增"><a href="#_18-replaceall-新增" class="header-anchor">#</a> 18. replaceAll()     - 新增</h2> <p>历史上，字符串的实例方法replace()只能替换第一个匹配。</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>// 替换一个
+'aabbcc'.replace('b', '_')
+// 'aa_bcc'
+
+// 替换所有
+'aabbcc'.replace(/b/g, '_')
+// 'aa__cc'
+// 或
+'aabbcc'.replaceAll('b', '_')
+// 'aa__cc'
+</code></pre></div></details> <p>replaceAll()的第二个参数replacement是一个字符串，表示替换的文本，其中可以使用一些特殊字符串。</p> <details class="custom-block details"><summary>See More</summary> <div class="language- extra-class"><pre><code>- $&amp;：匹配的子字符串。
+- $` ：匹配结果前面的文本。
+- $'：匹配结果后面的文本。
+- $n：匹配成功的第n组内容，n是从1开始的自然数。这个参数生效的前提是，第一个参数必须是正则表达式。
+- $$：指代美元符号$。
+</code></pre></div></details> <div style="color:red;">replaceAll()的第二个参数replacement除了为字符串，也可以是一个函数，该函数的返回值将替换掉第一个参数searchValue匹配的文本。</div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-16b6d362><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_1-字符的-unicode-表示法" class="sidebar-link" data-v-16b6d362>1.字符的 Unicode 表示法</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_2-字符串的遍历器接口" class="sidebar-link" data-v-16b6d362>2.字符串的遍历器接口</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_3-字符关键字" class="sidebar-link" data-v-16b6d362>3.字符关键字</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_4-json-stringify-的改造" class="sidebar-link" data-v-16b6d362>4.JSON.stringify() 的改造</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_5-模板字符串" class="sidebar-link" data-v-16b6d362>5.模板字符串</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_6-模板编译" class="sidebar-link" data-v-16b6d362>6.模板编译</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_7-标签模板" class="sidebar-link" data-v-16b6d362>7.标签模板</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_8-模板字符串的限制" class="sidebar-link" data-v-16b6d362>8.模板字符串的限制</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_9-string-fromcodepoint-新增" class="sidebar-link" data-v-16b6d362>9. String.fromCodePoint()   - 新增</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_10-codepointat-新增" class="sidebar-link" data-v-16b6d362>10. codePointAt()    - 新增</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_11-string-raw-新增" class="sidebar-link" data-v-16b6d362>11. String.raw()     - 新增</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_12-normalize-新增" class="sidebar-link" data-v-16b6d362>12. normalize()      - 新增</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_13-实例方法：includes-startswith-endswith-新增" class="sidebar-link" data-v-16b6d362>13. 实例方法：includes(), startsWith(), endsWith()       - 新增</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_14-repeat-新增" class="sidebar-link" data-v-16b6d362>14. repeat()      - 新增</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_15-实例方法：padstart-，padend-新增" class="sidebar-link" data-v-16b6d362>15. 实例方法：padStart()，padEnd()      - 新增</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_16-实例方法：trimstart-，trimend-新增" class="sidebar-link" data-v-16b6d362>16. 实例方法：trimStart()，trimEnd()     - 新增</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_17-matchall-新增" class="sidebar-link" data-v-16b6d362>17. matchAll()       - 新增</a></li><li class="level-2" data-v-16b6d362><a href="/blog/views/xuexi/es6/es6%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95.html#_18-replaceall-新增" class="sidebar-link" data-v-16b6d362>18. replaceAll()     - 新增</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-6fc9c224 data-v-6fc9c224><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-6fc9c224><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-6fc9c224></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-6fc9c224></path></svg></div></div></div>
+    <script src="/blog/assets/js/app.a450f01b.js" defer></script><script src="/blog/assets/js/3.1bc4757d.js" defer></script><script src="/blog/assets/js/1.8d651c59.js" defer></script><script src="/blog/assets/js/28.00000c24.js" defer></script>
+  </body>
+</html>

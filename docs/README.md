@@ -2,6 +2,19 @@
 home: true
 heroText: huashuocuicui
 tagline: 小手搬砖.
+
+carousel: [
+  {"url":"1.jpg","title1":"huashuocuicui","title2":"小手搬砖."},
+  {"url":"2.jpg","title1":"huashuocuicui","title2":"小手搬砖."},
+  {"url":"3.jpg","title1":"huashuocuicui","title2":"小手搬砖."},
+  {"url":"4.jpg","title1":"huashuocuicui","title2":"小手搬砖."},
+  {"url":"a.jpg","title1":"huashuocuicui","title2":"小手搬砖."},
+  {"url":"b.jpg","title1":"话说崔崔","title2":"燃烧吧，小宇宙."},
+  {"url":"c.jpg","title1":"huashuocuicui","title2":"小手搬砖."},
+]
+
+# bgImage: "../images/home-bg.jpg"
+
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',

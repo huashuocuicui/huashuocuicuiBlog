@@ -1,11 +1,27 @@
 <template>
   <div class="home-blog">
     <div class="hero" :style="{ ...bgImageStyle }">
-      <div
+      <!-- <div
         class="mask"
-        :style="{
-      background: `url(${$frontmatter.bgImage ? $withBase($frontmatter.bgImage) : require('../images/home-bg.jpg')}) center/cover no-repeat`}"></div>
-      <ModuleTransition>
+        :style="{background: `url(${$frontmatter.bgImage ? $withBase($frontmatter.bgImage) : require('../images/home-bg.jpg')}) center/cover no-repeat`}"></div> -->
+
+        <el-carousel direction="vertical" :autoplay="false" style="height:100%;">
+          <el-carousel-item v-for="item in $frontmatter.carousel" :key="item.url" :style="{background: `url(${require('../images/'+item.url)}) center/cover no-repeat`}">
+            <ModuleTransition delay="0.04">
+              <h1 v-if="recoShowModule && $frontmatter.heroText !== null">
+                {{item.title1}}
+              </h1>
+            </ModuleTransition>
+
+            <ModuleTransition delay="0.08">
+              <p v-if="recoShowModule && $frontmatter.tagline !== null" class="description">
+                {{item.title2}}
+              </p>
+            </ModuleTransition>
+          </el-carousel-item>
+        </el-carousel>
+
+      <!-- <ModuleTransition>
         <img
           v-if="recoShowModule && $frontmatter.heroImage"
           :style="heroImageStyle || {}"
@@ -22,7 +38,7 @@
         <p v-if="recoShowModule && $frontmatter.tagline !== null" class="description">
           {{ $frontmatter.tagline || $description || 'Welcome to your vuePress-theme-reco site' }}
         </p>
-      </ModuleTransition>
+      </ModuleTransition> -->
     </div>
 
     <ModuleTransition delay="0.16">
@@ -75,14 +91,17 @@ import PersonalInfo from '@theme/components/PersonalInfo'
 import { getOneColor } from '@theme/helpers/other'
 import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 
+import Element from 'element-ui'
+
 export default {
   mixins: [pagination, moduleTransitonMixin],
-  components: { NoteAbstract, TagList, FriendLink, ModuleTransition, PersonalInfo },
+  components: { NoteAbstract, TagList, FriendLink, ModuleTransition, PersonalInfo, Element},
   data () {
     return {
       recoShow: false,
       currentPage: 1,
-      tags: []
+      tags: [],
+      banners:[]
     }
   },
   computed: {
@@ -123,10 +142,12 @@ export default {
     }
   },
   mounted () {
+
     this.recoShow = true
     this._setPage(this._getStoragePage())
   },
   methods: {
+
     // 获取当前页码
     getCurrentPage (page) {
       this._setPage(page)
@@ -158,6 +179,10 @@ export default {
 </script>
 
 <style lang="stylus">
+.el-carousel__container{
+  height:100%;
+}
+
 .home-blog {
   padding: $navbarHeight 0 0;
   margin: 0px auto;

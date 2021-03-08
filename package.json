@@ -58,5 +58,12 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@vssue/api-github-v4": "^1.4.0",
+    "@vssue/vuepress-plugin-vssue": "^1.4.6",
+    "async-validator": "^1.11.5",
+    "element-ui": "^2.15.0",
+    "js-md5": "^0.7.3"
   }
 }

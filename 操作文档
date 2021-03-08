@@ -1,0 +1,21 @@
+ --- 启动
+    1. npm run docs:dev   启动不成功重新下载依赖  npm i 
+    2. 所有修改内容都在docs文件夹
+
+
+
+ --- 打包部署 -- github
+    0.  修改docs/.vuepress/config.js  base:"/"    //* 部署到github为“/”  部署到gitee为“/blog/”
+    1. npm run docs:build
+    2. 生成 example/public
+    3. 复制public到  D:\WWW\hushuocuicuiBokeDist\huashuocuicui.github.io 进行提交git
+    4. 提交git到 huashuocuicui.github.io
+    5. 浏览器访问 https://huashuocuicui.github.io/
+
+ --- 打包部署  -- gitee
+    0. 修改docs/.vuepress/config.js  base:"/blog/"    //* 部署到github为“/”  部署到gitee为“/blog/”
+    1. npm run docs:build
+    2. 生成 example/public
+    3. 复制public到  D:\WWW\huashuocuicuiBlogGitee\blog 进行提交git "blog"
+    4. 提交git到 https://gitee.com/huashuocuicui/blog.git   //gitee
+    5. 浏览器访问 http://huashuocuicui.gitee.io/blog/
